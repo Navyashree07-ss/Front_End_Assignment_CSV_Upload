@@ -1,0 +1,22 @@
+<div class="container">
+  <header>
+    <h1>FRONT END ASSIGNMENT</h1>
+    <div class="project-name">CSV UPLOAD PROJECT</div>
+  </header>
+  <br /><br />
+  <div class="upload-container">
+    <div class="upload-header">
+      <h1>Upload CSV</h1>
+    </div>
+    <div class="upload-body">
+      <div class="upload-drop-zone">
+        <input style="margin-left:21%" type="file" (change)="onFileChange($event)" />
+        <p>Select a CSV file to upload</p>
+      </div>
+      <div>
+        <kendo-button class="upload-button" [disabled]="isDisabled" (click)="OnViewData()">View Table Data</kendo-button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</div>

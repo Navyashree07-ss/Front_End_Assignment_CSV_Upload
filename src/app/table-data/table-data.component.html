@@ -1,0 +1,90 @@
+<div class="container">
+  <header>
+    <h1>FRONT END ASSIGNMENT</h1>
+    <div class="project-name">CSV UPLOAD PROJECT</div>
+  </header>
+  <br /><br />
+ 
+  <div>
+    <div>
+      <kendo-grid [kendoGridBinding]="tableDetails" [style.height]="'400px'">
+        <kendo-grid-column field="Name" title="Name" [width]="220">
+          <ng-template kendoGridCellTemplate let-dataItem>
+            <div *ngIf="!isValidName(dataItem)" [title]="'name should not be empty'">
+              <span [ngClass]="{'cell-error-empty' : !isValidName(dataItem)}">
+                {{dataItem.name}}
+              </span>
+            </div>
+            <div *ngIf="isValidName(dataItem)">
+                {{dataItem.name}}
+            </div>
+          </ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="Email" title="Email" [width]="220">
+          <ng-template kendoGridCellTemplate let-dataItem>
+            <div *ngIf="!isValidEmail(dataItem)" [title]="getToolTipEmail(dataItem)">
+              <span [ngClass]="{'cell-error': !isValidEmail(dataItem)}">
+                {{dataItem.Email}}
+              </span>
+            </div>
+            <div *ngIf="isValidEmail(dataItem)">
+              {{dataItem.Email}}
+            </div>
+          </ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="phoneNumber" title="Phone Number" [width]="220">
+          <ng-template kendoGridCellTemplate let-dataItem>
+            <div *ngIf="!isValidPhoneNumber(dataItem)" [title]="getToolTipPhoneNumber(dataItem)">
+              <span [ngClass]="{'cell-error': !isValidPhoneNumber(dataItem)}">
+                {{dataItem.phoneNumber}}
+              </span>
+            </div>
+            <div *ngIf="isValidPhoneNumber(dataItem)">
+              {{dataItem.phoneNumber}}
+            </div>
+          </ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="City" title="City" [width]="220">
+          <ng-template kendoGridCellTemplate let-dataItem>
+            <div *ngIf="!isValidCity(dataItem)" [title]="'City should not be empty'">
+              <span [ngClass]="{'cell-error-empty' : !isValidCity(dataItem)}">
+                {{dataItem.City}}
+              </span>
+            </div>
+            <div *ngIf="isValidCity(dataItem)">
+              {{dataItem.City}}
+            </div>
+          </ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="Address" title="Address" [width]="220">
+          <ng-template kendoGridCellTemplate let-dataItem>
+            <div *ngIf="!isValidAddress(dataItem)" [title]="'Address should not be empty'">
+              <span [ngClass]="{'cell-error-empty' : !isValidAddress(dataItem)}">
+                {{dataItem.Address}}
+              </span>
+            </div>
+            <div *ngIf="isValidAddress(dataItem)">
+              {{dataItem.Address}}
+            </div>
+          </ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="Gpa" title="GPA" [width]="220">
+          <ng-template kendoGridCellTemplate let-dataItem>
+            <div *ngIf="!isValidGPA(dataItem)" [title]="getToolTipForGPA(dataItem)">
+              <span [ngClass]="{'cell-error': !isValidGPA(dataItem)}">
+                {{dataItem.Gpa}}
+              </span>
+            </div>
+            <div *ngIf="isValidGPA(dataItem)">
+              {{dataItem.Gpa}}
+            </div>
+          </ng-template>
+        </kendo-grid-column>
+      </kendo-grid>
+    </div>
+  </div>
+  <br /><br />
+  <div style="align-self:center">
+    <kendo-button class="upload-button" (click)="OnViewSummary()" >View Summary</kendo-button>
+  </div>
+</div>

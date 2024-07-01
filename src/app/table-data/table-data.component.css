@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column
+}
+
+header {
+  background-color: #008080;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-name {
+  font-size: 14px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.cell-error {
+  /*background-color: red;
+  color: white;*/
+  border: 1px solid;
+  background-color: red;
+  padding-top: 4px;
+  padding-left: 44px;
+  padding-right: 73px;
+  padding-bottom: 4px;
+}
+.k-table-td .cell-error-empty {
+  border: 2px solid;
+  border-color: red;
+}
+
+.cell-error-empty {
+  border: 1px solid;
+  background-color: red;
+  padding-top: 4px;
+  padding-left: 198px;
+  padding-bottom: 4px;
+}
+
+.k-grid .k-grid-content td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.upload-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}

@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  flex-direction: column
+}
+
+header {
+  background-color: #008080;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-name {
+  font-size: 14px;
+}
+
+header h1 {
+  margin: 0;
+}
+.success-message {
+  margin-bottom: 20px;
+  margin-left:28%;
+}
+
+  .success-message .checkmark {
+    font-size: 50px;
+    color: green;
+  }
+
+  .success-message p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .success-message .import-summary {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+.details {
+  text-align: left;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+  .tabs li {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+    .tabs li.active {
+      border-bottom: 3px solid #007bff;
+      font-weight: bold;
+    }
+
+.summary {
+  padding: 10px 0;
+}
+
+  .summary .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .summary .cell {
+    flex: 1;
+    text-align: left;
+  }
+
+.success {
+  color: green;
+}
+
+.failure {
+  color: red;
+}
+.divider {
+  position: absolute;
+  border-left: 1px solid;
+  height: 78px;
+  left: 29%;
+}

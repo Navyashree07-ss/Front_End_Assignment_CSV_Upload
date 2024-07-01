@@ -1,0 +1,37 @@
+<div class="container">
+  <header>
+    <h1>FRONT END ASSIGNMENT</h1>
+    <div class="project-name">CSV UPLOAD PROJECT</div>
+  </header>
+  <br /><br />
+  <div class="content">
+    <div class="success-message">
+      <div class="checkmark">&#10003;</div>
+      <p>Data imported successfully</p>
+      <p class="import-summary">Import Summary</p>
+    </div>
+    <div class="details">
+      <ul class="tabs">
+        <li class="active">Employee Details</li>
+      </ul>
+      <hr class="divider">
+      <div class="summary">
+        <div class="row">
+          <div class="cell">Employee Details</div>
+        </div>
+        <div class="row" style="position:absolute;top:47%;left:32%">
+          <div class="cell" style="margin-right:341%;color:#007bff">Success: </div>
+          <div class="cell" style="color:#007bff">{{totalSucesscount}}</div>
+        </div>
+        <div class="row" style="position:absolute;top:53%;left:32%">
+          <div class="cell" style="margin-right:435%;color:red">Failure: </div>
+          <div class="cell" style="color:red">{{errorcount}}</div>
+        </div>
+        <div class="row">
+          <div class="cell">Total No. of Records</div>
+          <div class="cell" style="margin-right:49%">{{totalDataCount}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
